@@ -1,1 +1,0 @@
-# Readonly.Link Manual
