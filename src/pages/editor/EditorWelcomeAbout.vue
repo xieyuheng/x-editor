@@ -24,9 +24,7 @@ defineProps<{ state: State }>()
           <p>目前支持 Chrome、Edge 和 Opera 等基于 Chromium 的浏览器。</p>
         </template>
         <template #en>
-          <p>
-            <b>X Editor</b> is a text editor embedded in the browser.
-          </p>
+          <p><b>X Editor</b> is a text editor embedded in the browser.</p>
 
           <p>
             It can access user's local file system, and preview Markdown files.
