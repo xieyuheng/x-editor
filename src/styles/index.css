@@ -1,0 +1,12 @@
+@import './tailwind.css';
+@import './svg.css' layer(base);
+@import './selection.css' layer(base);
+@import './height.css' layer(utilities);
+@import './scrollbar.css' layer(utilities);
+@import './splitpanes.css';
+
+@import 'katex/dist/katex.css';
+
+.text-balance {
+  text-wrap: balance;
+}

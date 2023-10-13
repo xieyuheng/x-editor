@@ -1,0 +1,19 @@
+{
+  "kind": "Manual",
+  "title": "只读链接手册",
+  "version": "0.0.1",
+  "authors": ["谢宇恒"],
+  "date": "2022",
+  "src": "zh",
+  "main": "introduction.md",
+  "sections": {
+    "default": ["faq.md", "introduction.md"],
+    "内容类型": [
+      "kinds-of-contents/article.md",
+      "kinds-of-contents/book.md",
+      "kinds-of-contents/manual.md",
+      "kinds-of-contents/author.md"
+    ],
+    "定制元素": ["custom-elements/readonlylink.md", "custom-elements/mimor.md"]
+  }
+}
