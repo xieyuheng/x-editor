@@ -15,18 +15,15 @@
     "@heroicons/vue": "^2.0.18",
     "@vueuse/core": "^10.5.0",
     "@vueuse/head": "^2.0.0",
-    "@xieyuheng/ty": "^0.1.26",
     "browser-fs-access": "^0.35.0",
     "idb-keyval": "^6.2.1",
     "js-base64": "^3.7.5",
-    "path-browserify": "^1.0.1",
     "splitpanes": "^3.1.5",
     "vue": "^3.3.4",
     "vue-meta": "^2.4.0",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@types/path-browserify": "^1.0.0",
     "@types/splitpanes": "^2.2.3",
     "@types/wicg-file-system-access": "^2023.10.1",
     "@vitejs/plugin-vue": "^4.4.0",
