@@ -56,84 +56,8 @@ const lang = useGlobalLang()
           <template #en> Homepage </template>
         </Lang>
       </Hyperlink>
-
-      <Hyperlink
-        class="hover:text-black dark:hover:text-white"
-        :class="{ 'text-black dark:text-white': route.path === '/authors' }"
-        href="/authors"
-      >
-        <Lang>
-          <template #zh> 作者 </template>
-          <template #en> Authors </template>
-        </Lang>
-      </Hyperlink>
-
-      <Hyperlink
-        class="hover:text-black dark:hover:text-white"
-        :class="{ 'text-black dark:text-white': route.path === '/following' }"
-        href="/following"
-      >
-        <Lang>
-          <template #zh> 关注 </template>
-          <template #en> Following </template>
-        </Lang>
-      </Hyperlink>
-
-      <Hyperlink
-        class="hover:text-black dark:hover:text-white"
-        :class="{ 'text-black dark:text-white': route.path === '/history' }"
-        href="/history"
-      >
-        <Lang>
-          <template #zh> 历史 </template>
-          <template #en> History </template>
-        </Lang>
-      </Hyperlink>
     </div>
 
-    <div class="flex flex-col items-start space-y-1 pb-6 pr-8">
-      <a
-        href="/editor"
-        class="flex items-center hover:text-black dark:hover:text-white"
-        :class="{ 'text-black dark:text-white': route.path === '/editor' }"
-        target="_blank"
-      >
-        <Lang>
-          <template #zh> 编辑器 </template>
-          <template #en> Editor </template>
-        </Lang>
 
-        <ArrowTopRightOnSquareIcon class="ml-0.5 h-4 w-4" />
-      </a>
-
-      <a
-        :href="
-          lang.isZh()
-            ? `${origin}/manuals/${origin}/contents/manual/zh.json`
-            : `${origin}/manuals/${origin}/contents/manual/en.json`
-        "
-        class="flex items-center hover:text-black dark:hover:text-white"
-        :class="{ 'text-black dark:text-white': route.path === '/docs' }"
-        target="_blank"
-      >
-        <Lang>
-          <template #zh> 手册 </template>
-          <template #en> Manual </template>
-        </Lang>
-
-        <ArrowTopRightOnSquareIcon class="ml-0.5 h-4 w-4" />
-      </a>
-
-      <Hyperlink
-        class="hover:text-black dark:hover:text-white"
-        :class="{ 'text-black dark:text-white': route.path === '/about' }"
-        href="/about"
-      >
-        <Lang>
-          <template #zh> 关于 </template>
-          <template #en> About </template>
-        </Lang>
-      </Hyperlink>
-    </div>
   </div>
 </template>
