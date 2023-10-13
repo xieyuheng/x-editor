@@ -5,8 +5,6 @@
 @import './scrollbar.css' layer(utilities);
 @import './splitpanes.css';
 
-@import 'katex/dist/katex.css';
-
 .text-balance {
   text-wrap: balance;
 }
