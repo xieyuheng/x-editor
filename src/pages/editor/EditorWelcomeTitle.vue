@@ -10,12 +10,12 @@ defineProps<{ state: State }>()
     <template #zh>
       <span>欢迎使用</span>
       <br class="block sm:hidden" />
-      <span><b>只读编辑器</b></span>
+      <span><b>X 编辑器</b></span>
     </template>
     <template #en>
       <span> Welcome to use </span>
       <br class="block sm:hidden" />
-      <span><b> Readonly Editor </b></span>
+      <span><b> X Editor </b></span>
     </template>
   </Lang>
 </template>

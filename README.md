@@ -1,10 +1,10 @@
-# Readonly.Link
+# X Editor
 
-[ [Website](https://readonly.link)
-| [Manual](https://readonly.link/manuals/https://readonly.link/contents/manual/en.json)
-| [手册](https://readonly.link/manuals/https://readonly.link/contents/manual/zh.json) ]
+A text editor embedded in the browser.
 
-Readonly links, for your read only.
+It can access user's local file system, and preview Markdown files.
+
+Currently we support Chromium-based browsers (such as Chrome, Edge and Opera).
 
 ## Development
 
@@ -14,11 +14,6 @@ npm run dev     # Start the dev server
 npm run check   # Type check
 npm run format  # Format the code
 ```
-
-Notes:
-
-- Currently, this is a pure frontend project,
-  we do NOT need any backend server to run it.
 
 ## Contributions
 

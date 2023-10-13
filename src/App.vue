@@ -9,8 +9,8 @@ const theme = useGlobalTheme()
 
 <template>
   <Head>
-    <title v-if="lang.isZh()">Readonly</title>
-    <title v-else>Readonly</title>
+    <title v-if="lang.isZh()">X Editor</title>
+    <title v-else>X 编辑器</title>
 
     <meta v-if="theme.name === 'light'" name="theme-color" content="white" />
     <meta v-if="theme.name === 'dark'" name="theme-color" content="black" />

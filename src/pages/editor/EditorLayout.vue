@@ -23,8 +23,8 @@ const lang = useGlobalLang()
     class="h-screen-dynamic flex w-screen flex-col bg-white text-xl text-black dark:bg-black dark:text-white"
   >
     <Head>
-      <title v-if="lang.isZh()">编辑器 | 只读</title>
-      <title v-else>Editor | Readonly</title>
+      <title v-if="lang.isZh()">X 编辑器</title>
+      <title v-else>X Editor</title>
     </Head>
 
     <Splitpanes

@@ -1,7 +1,7 @@
 {
-  "name": "Readonly.Link",
-  "short_name": "-r--",
-  "description": "A document rendering tool, and a community for authors.",
+  "name": "X Editor",
+  "short_name": "X Ed",
+  "description": "A text editor embedded in the browser.",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#ffffff",

@@ -13,8 +13,8 @@ const route = useRoute()
 <template>
   <PageLayout>
     <Head>
-      <title v-if="lang.isZh()">404 | 只读</title>
-      <title v-else>404 | Readonly</title>
+      <title v-if="lang.isZh()">404 | X 编辑器</title>
+      <title v-else>404 | X Editor</title>
     </Head>
 
     <div class="space-y-2 overflow-x-auto py-4">

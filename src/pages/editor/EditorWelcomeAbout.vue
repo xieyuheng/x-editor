@@ -17,7 +17,7 @@ defineProps<{ state: State }>()
     >
       <Lang class="flex flex-col space-y-2.5">
         <template #zh>
-          <p><b>只读编辑器</b>是嵌入在浏览器中的文本编辑器。</p>
+          <p><b>X 编辑器</b>是嵌入在浏览器中的文本编辑器。</p>
 
           <p>它可以访问用户的本地文件系统，并且预览 Markdown 文件。</p>
 
@@ -25,7 +25,7 @@ defineProps<{ state: State }>()
         </template>
         <template #en>
           <p>
-            <b>Readonly Editor</b> is a text editor embedded in the browser.
+            <b>X Editor</b> is a text editor embedded in the browser.
           </p>
 
           <p>

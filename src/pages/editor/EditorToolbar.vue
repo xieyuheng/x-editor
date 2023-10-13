@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { useRoute } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
-import Hyperlink from '../../components/utils/Hyperlink.vue'
 import { useGlobalTheme } from '../../models/theme'
 import { callWithConfirm } from '../../utils/browser/callWithConfirm'
 import { currentOrigin } from '../../utils/currentOrigin'
@@ -140,19 +138,6 @@ const lang = useGlobalLang()
           </template>
         </Lang>
       </button>
-
-      <Hyperlink
-        class="flex items-center whitespace-pre hover:underline disabled:text-stone-500 disabled:no-underline disabled:dark:text-stone-400"
-        href="/"
-        target="_blank"
-      >
-        <Lang>
-          <template #zh>只读链接</template>
-          <template #en>Readonly.Link</template>
-        </Lang>
-
-        <ArrowTopRightOnSquareIcon class="ml-0.5 h-4 w-4" />
-      </Hyperlink>
     </div>
   </div>
 </template>
