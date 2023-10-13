@@ -1,5 +1,7 @@
 # X Editor
 
+[ [Website](https://editor.fidb.app) ]
+
 A text editor embedded in the browser.
 
 It can access user's local file system, and preview Markdown files.
