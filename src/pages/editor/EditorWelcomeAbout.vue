@@ -6,7 +6,7 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <div class="h-full justify-between flex flex-col space-y-4">
+  <div class="flex h-full flex-col justify-between space-y-4">
     <div>
       <Lang class="text-2xl font-bold sm:text-3xl">
         <template #zh>关于</template>
@@ -28,7 +28,8 @@ defineProps<{ state: State }>()
             <p><b>X Editor</b> is a text editor embedded in the browser.</p>
 
             <p>
-              It can access user's local file system, and preview Markdown files.
+              It can access user's local file system, and preview Markdown
+              files.
             </p>
 
             <p>
@@ -41,7 +42,7 @@ defineProps<{ state: State }>()
     </div>
 
     <div
-      class="flex text-stone-500 dark:text-stone-400 flex-col items-start space-y-2 text-sm sm:text-base"
+      class="flex flex-col items-start space-y-2 text-sm text-stone-500 dark:text-stone-400 sm:text-base"
     >
       <Lang>
         <template #zh>

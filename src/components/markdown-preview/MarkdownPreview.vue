@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { parseDocument } from '@xieyuheng/x-markdown'
 import { ref, watchEffect } from 'vue'
 
 const props = defineProps<{
@@ -20,15 +21,13 @@ watchEffect(() => {
 function sendDocument() {
   if (!iframeElement.value) return
 
+  if (!props.text) return
+
   const contentWindow = iframeElement.value.contentWindow
   if (!contentWindow) return
 
-  contentWindow.postMessage(
-    {
-      text: props.text,
-    },
-    '*',
-  )
+  const document = parseDocument(props.text)
+  contentWindow.postMessage({ document }, '*')
 }
 </script>
 

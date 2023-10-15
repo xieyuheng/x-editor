@@ -10,5 +10,5 @@ defineProps<{
 </script>
 
 <template>
-  <MarkdownPreview class="h-full w-full p-3" :text="tab.text"  />
+  <MarkdownPreview class="h-full w-full p-3" :text="tab.text" />
 </template>

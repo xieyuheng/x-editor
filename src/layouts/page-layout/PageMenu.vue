@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from '@heroicons/vue/24/outline'
 import { useRoute } from 'vue-router'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
@@ -57,7 +56,5 @@ const lang = useGlobalLang()
         </Lang>
       </Hyperlink>
     </div>
-
-
   </div>
 </template>
