@@ -5,7 +5,6 @@ import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import { useGlobalTheme } from '../../models/theme'
 import { callWithConfirm } from '../../utils/browser/callWithConfirm'
 import { currentOrigin } from '../../utils/currentOrigin'
-import EditorToolbarPreview from './EditorToolbarPreview.vue'
 import { State } from './State'
 import { stateDirectoryOpen } from './stateDirectoryOpen'
 import { stateFileCreate } from './stateFileCreate'
@@ -109,8 +108,6 @@ const lang = useGlobalLang()
     </div>
 
     <div class="flex space-x-4">
-      <EditorToolbarPreview :state="state" />
-
       <button
         class="flex items-center whitespace-nowrap hover:text-black hover:underline dark:hover:text-white"
         @click="lang.isZh() ? (lang.tag = 'en') : (lang.tag = 'zh')"
