@@ -1,1 +1,1 @@
-use readonlylink iframe as markdown preview
+use MarkdownPreview in editor
