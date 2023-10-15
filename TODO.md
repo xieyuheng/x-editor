@@ -1,1 +1,2 @@
-use MarkdownPreview in editor
+remove preview link
+MarkdownPreview -- support local image

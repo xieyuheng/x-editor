@@ -2,6 +2,7 @@
 import EditorLinenumber from './EditorLinenumber.vue'
 import EditorModeline from './EditorModeline.vue'
 import EditorTextarea from './EditorTextarea.vue'
+import EditorMarkdownPreview from './EditorMarkdownPreview.vue'
 import { State } from './State'
 import { Tab } from './Tab'
 
@@ -16,6 +17,7 @@ defineProps<{
     <div class="flex h-full w-full overflow-auto">
       <EditorLinenumber :state="state" :tab="tab" />
       <EditorTextarea :state="state" :tab="tab" />
+      <EditorMarkdownPreview class="min-w-[30rem]" :state="state" :tab="tab" />
     </div>
 
     <EditorModeline :state="state" :tab="tab" />

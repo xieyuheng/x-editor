@@ -7,7 +7,17 @@ const props = defineProps<{
 
 const iframeElement = ref<HTMLIFrameElement | undefined>(undefined)
 
+window.addEventListener('message', (event) => {
+  if (event.data.message === 'mounted') {
+    sendDocument()
+  }
+})
+
 watchEffect(() => {
+  sendDocument()
+})
+
+function sendDocument() {
   if (!iframeElement.value) return
 
   const contentWindow = iframeElement.value.contentWindow
@@ -19,16 +29,10 @@ watchEffect(() => {
     },
     '*',
   )
-})
+}
 </script>
 
 <template>
-  <div>
-    <iframe
-      ref="iframeElement"
-      frameborder="0"
-      src="https://readonly.link/embedded-article"
-    >
-    </iframe>
-  </div>
+  <iframe ref="iframeElement" src="https://readonly.link/embedded-article">
+  </iframe>
 </template>
