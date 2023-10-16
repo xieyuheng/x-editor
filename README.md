@@ -7,6 +7,7 @@ A text editor embedded in the browser, while still can edit your local files.
 - Preview Markdown.
 - View image.
 - Listen audio.
+- Watch video.
 
 Currently we support Chromium-based browsers (such as Chrome, Edge and Opera).
 
