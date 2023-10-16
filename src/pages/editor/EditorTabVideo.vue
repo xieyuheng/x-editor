@@ -1,14 +1,25 @@
 <script setup lang="ts">
+import { onUnmounted, ref, watchEffect } from 'vue'
 import EditorModeline from './EditorModeline.vue'
 import { State } from './State'
 import { Tab } from './Tab'
-import { tabBase64 } from './tabBase64'
-import { tabMediaType } from './tabMediaType'
 
-defineProps<{
+const props = defineProps<{
   state: State
   tab: Tab
 }>()
+
+const src = ref<string>()
+
+watchEffect(() => {
+  src.value = URL.createObjectURL(props.tab.file)
+})
+
+onUnmounted(() => {
+  if (src.value) {
+    URL.revokeObjectURL(src.value)
+  }
+})
 </script>
 
 <template>
@@ -16,7 +27,7 @@ defineProps<{
     <video
       class="flex h-full w-full flex-col items-start justify-center overflow-auto"
       controls
-      :src="`data:${tabMediaType(tab)};base64,${tabBase64(tab)}`"
+      :src="src"
     ></video>
 
     <EditorModeline :state="state" :tab="tab" />
