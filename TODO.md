@@ -1,2 +1,4 @@
-use contentTypeRecord
-support preview image file
+EditorTabImage
+EditorTabPlaintext
+EditorTabMarkdown
+EditorTabBinary

@@ -3,6 +3,7 @@ import { WorkspaceNodeFile } from './WorkspaceNode'
 export type Tab = {
   handle: FileSystemFileHandle
   file: File
+  arrayBuffer: ArrayBuffer
   text: string
   originalText: string
   isProcessing: boolean

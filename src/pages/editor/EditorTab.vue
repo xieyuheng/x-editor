@@ -7,6 +7,8 @@ import EditorModeline from './EditorModeline.vue'
 import EditorTextarea from './EditorTextarea.vue'
 import { State } from './State'
 import { Tab } from './Tab'
+import { tabBase64 } from './tabBase64'
+import { tabMediaType } from './tabMediaType'
 
 defineProps<{
   state: State
@@ -20,8 +22,15 @@ const splitpanesSize = useLocalStorage('EditorTab.splitpanesSize', 36)
   <div class="flex h-full flex-col overflow-auto">
     <div class="flex h-full w-full overflow-auto">
       <EditorLinenumber :state="state" :tab="tab" />
+
+      <img
+        v-if="tabMediaType(tab).startsWith('image/')"
+        :src="`data:${tabMediaType(tab)};base64,${tabBase64(tab)}`"
+        alt=""
+      />
+
       <EditorTextarea
-        v-if="!tab.file.name.endsWith('.md')"
+        v-else-if="!tab.file.name.endsWith('.md')"
         :state="state"
         :tab="tab"
       />
