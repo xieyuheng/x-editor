@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import * as musicMetadata from 'music-metadata-browser'
-import { ref, watchEffect } from 'vue'
+import { onUnmounted, ref, watchEffect } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import EditorModeline from './EditorModeline.vue'
 import { State } from './State'
 import { Tab } from './Tab'
-import { tabBase64 } from './tabBase64'
-import { tabMediaType } from './tabMediaType'
 
 const props = defineProps<{
   state: State
@@ -17,6 +15,18 @@ const metadata = ref<musicMetadata.IAudioMetadata | undefined>()
 
 watchEffect(async () => {
   metadata.value = await musicMetadata.parseBlob(props.tab.file)
+})
+
+const src = ref<string>()
+
+watchEffect(() => {
+  src.value = URL.createObjectURL(props.tab.file)
+})
+
+onUnmounted(() => {
+  if (src.value) {
+    URL.revokeObjectURL(src.value)
+  }
 })
 </script>
 
@@ -71,10 +81,7 @@ watchEffect(async () => {
       </div>
 
       <div class="p-6">
-        <audio
-          controls
-          :src="`data:${tabMediaType(tab)};base64,${tabBase64(tab)}`"
-        ></audio>
+        <audio controls :src="src"></audio>
       </div>
     </div>
 

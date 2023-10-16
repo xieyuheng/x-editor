@@ -1,1 +1,1 @@
-EditorTabAudio -- should not use base64
+EditorTabImage -- should not use base64
