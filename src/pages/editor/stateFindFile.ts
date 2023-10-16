@@ -7,11 +7,11 @@ export async function stateFindFile(
 ): Promise<File | undefined> {
   if (!state.currentWorkspace) return
   if (!state.currentTab) return
-  if (!state.currentTab.node?.parent?.relativePath) return
+
+  if (state.currentTab.node?.parent?.relativePath === undefined) return
 
   const relativePath = join(state.currentTab.node.parent.relativePath, path)
-  const parts = relativePath.split('/')
-
+  const parts = decodeURIComponent(relativePath).split('/')
   let directoryHandle = state.currentWorkspace.root.handle
   for (const [index, part] of parts.entries()) {
     if (index === parts.length - 1) {

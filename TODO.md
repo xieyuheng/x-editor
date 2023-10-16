@@ -1,1 +1,0 @@
-stateFindFile and fix stateDocumentInlineImages

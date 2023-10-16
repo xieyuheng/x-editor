@@ -7,6 +7,7 @@ export async function workspaceLoad(
 ): Promise<Workspace> {
   const root = WorkspaceNodeDirectory(handle)
 
+  root.relativePath = ''
   root.children = await workspaceNodeDirectoryLoadChildren(root, root)
 
   return { root }
