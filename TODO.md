@@ -1,4 +1,4 @@
-EditorTabImage -- improve layout
+EditorModeline -- show mediaType
 EditorTabAudio
 EditorTabVideo
 EditorTabBinary
