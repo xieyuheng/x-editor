@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import EditorTabAudio from './EditorTabAudio.vue'
 import EditorTabImage from './EditorTabImage.vue'
 import EditorTabMarkdown from './EditorTabMarkdown.vue'
 import EditorTabPlaintext from './EditorTabPlaintext.vue'
@@ -15,6 +16,12 @@ defineProps<{
 <template>
   <EditorTabImage
     v-if="tabMediaType(tab).startsWith('image/')"
+    :state="state"
+    :tab="tab"
+  />
+
+  <EditorTabAudio
+    v-else-if="tabMediaType(tab).startsWith('audio/')"
     :state="state"
     :tab="tab"
   />

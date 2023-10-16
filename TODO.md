@@ -1,3 +1,2 @@
-EditorTabAudio
 EditorTabVideo
 EditorTabBinary
