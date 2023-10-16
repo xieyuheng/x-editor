@@ -14,7 +14,7 @@ import { State } from './State'
 
 defineProps<{ state: State }>()
 
-const splitpanesSize = useLocalStorage('ManagerLayout.splitpanesSize', 24)
+const splitpanesSize = useLocalStorage('EditorLayout.splitpanesSize', 24)
 const lang = useGlobalLang()
 </script>
 
