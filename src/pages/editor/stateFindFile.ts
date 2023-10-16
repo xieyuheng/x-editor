@@ -24,6 +24,11 @@ export async function stateFindFile(
       }
     }
   } catch (error) {
-    console.error({ who: 'stateFindFile', error })
+    console.error({
+      who: 'stateFindFile',
+      message: 'I fail to find file.',
+      path,
+      error,
+    })
   }
 }
