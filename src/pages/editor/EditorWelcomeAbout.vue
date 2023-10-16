@@ -7,7 +7,7 @@ defineProps<{ state: State }>()
 
 <template>
   <div class="flex h-full flex-col justify-between space-y-4">
-    <div>
+    <div class="flex flex-col space-y-4">
       <Lang class="text-2xl font-bold sm:text-3xl">
         <template #zh>关于</template>
         <template #en>About</template>
@@ -41,10 +41,28 @@ defineProps<{ state: State }>()
       </div>
     </div>
 
-    <div
-      class="flex flex-col items-start space-y-2 text-sm text-stone-500 dark:text-stone-400 sm:text-base"
-    >
-      <Lang>
+    <div class="flex flex-col items-start space-y-2">
+      <Lang class="text-base text-stone-500 dark:text-stone-400 sm:text-lg">
+        <template #zh>
+          <p>
+            源代码：<a
+              href="https://github.com/xieyuheng/x-editor"
+              target="_blank"
+              >github.com/xieyuheng/x-editor</a
+            >
+          </p>
+        </template>
+        <template #en>
+          <p>
+            Source code:
+            <a href="https://github.com/xieyuheng/x-editor" target="_blank"
+              >github.com/xieyuheng/x-editor</a
+            >
+          </p>
+        </template>
+      </Lang>
+
+      <Lang class="text-base text-stone-500 dark:text-stone-400 sm:text-lg">
         <template #zh>
           <a href="https://xieyuheng.com" target="_blank"> 谢宇恒软件工作室 </a>
         </template>
