@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { parseDocument } from '@xieyuheng/x-markdown'
+import { Document } from '@xieyuheng/x-markdown'
 import { ref, watchEffect } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalTheme } from '../../models/theme'
 
 const props = defineProps<{
-  text?: string
+  document: Document
 }>()
 
 const theme = useGlobalTheme()
@@ -14,19 +14,13 @@ const iframeElement = ref<HTMLIFrameElement | undefined>(undefined)
 
 window.addEventListener('message', (event) => {
   if (event.data.message === 'mounted') {
-    sendDocument()
+    send({ document: props.document })
     send({ theme: theme.name })
   }
 })
 
-watchEffect(() => sendDocument())
+watchEffect(() => send({ document: props.document }))
 watchEffect(() => send({ theme: theme.name }))
-
-function sendDocument() {
-  if (!props.text) return
-
-  send({ document: parseDocument(props.text) })
-}
 
 function send(data: any) {
   if (!iframeElement.value) return
