@@ -8,19 +8,18 @@ const props = defineProps<{
   text?: string
 }>()
 
+const theme = useGlobalTheme()
 const iframeLoaded = ref(false)
 const iframeElement = ref<HTMLIFrameElement | undefined>(undefined)
 
 window.addEventListener('message', (event) => {
   if (event.data.message === 'mounted') {
     sendDocument()
+    send({ theme: theme.name })
   }
 })
 
 watchEffect(() => sendDocument())
-
-const theme = useGlobalTheme()
-
 watchEffect(() => send({ theme: theme.name }))
 
 function sendDocument() {
