@@ -13,16 +13,10 @@ defineProps<{
 
 <template>
   <div class="flex h-full flex-col overflow-auto">
-    <div
-      class="flex h-full w-full flex-col items-start justify-center overflow-auto pb-20 pl-10"
-    >
-      <div class="p-6">
-        <video
-          controls
-          :src="`data:${tabMediaType(tab)};base64,${tabBase64(tab)}`"
-        ></video>
-      </div>
-    </div>
+ <video      class="flex h-full w-full flex-col items-start justify-center overflow-auto"
+        controls
+        :src="`data:${tabMediaType(tab)};base64,${tabBase64(tab)}`"
+      ></video>
 
     <EditorModeline :state="state" :tab="tab" />
   </div>
