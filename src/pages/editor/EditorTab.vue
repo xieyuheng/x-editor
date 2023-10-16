@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import EditorTabAudio from './EditorTabAudio.vue'
-import EditorTabVideo from './EditorTabVideo.vue'
 import EditorTabImage from './EditorTabImage.vue'
 import EditorTabMarkdown from './EditorTabMarkdown.vue'
 import EditorTabPlaintext from './EditorTabPlaintext.vue'
+import EditorTabVideo from './EditorTabVideo.vue'
 import { State } from './State'
 import { Tab } from './Tab'
 import { tabMediaType } from './tabMediaType'
@@ -32,8 +32,6 @@ defineProps<{
     :state="state"
     :tab="tab"
   />
-
-  
 
   <EditorTabMarkdown
     v-else-if="tabMediaType(tab) === 'text/markdown'"
