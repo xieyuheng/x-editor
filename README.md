@@ -4,7 +4,9 @@
 
 A text editor embedded in the browser.
 
-It can access user's local file system, and preview Markdown files.
+- Access user's local file system.
+- Preview Markdown files.
+- View image files.
 
 Currently we support Chromium-based browsers (such as Chrome, Edge and Opera).
 

@@ -6,12 +6,13 @@ export async function tabFromFileHandle(
   const file = await handle.getFile()
   const text = await file.text()
   const arrayBuffer = await file.arrayBuffer()
+  const bytes = new Uint8Array(arrayBuffer)
   return {
     handle,
     file,
-    text,
-    arrayBuffer,
+    originalBytes: bytes,
     originalText: text,
+    text,
     isProcessing: false,
     scrollTop: 0,
   }

@@ -3,9 +3,9 @@ import { WorkspaceNodeFile } from './WorkspaceNode'
 export type Tab = {
   handle: FileSystemFileHandle
   file: File
-  arrayBuffer: ArrayBuffer
-  text: string
   originalText: string
+  originalBytes: Uint8Array
+  text: string
   isProcessing: boolean
   scrollTop: number
   isHeightOverflow?: boolean

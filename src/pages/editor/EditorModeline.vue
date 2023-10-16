@@ -22,7 +22,7 @@ defineProps<{
       <span>{ </span>
 
       <template v-if="tabMediaType(tab).startsWith('text/')">
-        <span>line: </span>
+        <span>lines: </span>
         <span class="font-bold">{{ tab.text.split('\n').length }}</span>
         <span>, </span>
       </template>
@@ -33,8 +33,14 @@ defineProps<{
         <span>, </span>
       </template>
 
-      <span>length: </span>
-      <span class="font-bold">{{ tab.text.length }}</span>
+      <template v-if="tabMediaType(tab).startsWith('text/')">
+        <span>chars: </span>
+        <span class="font-bold">{{ tab.text.length }}</span>
+      </template>
+      <template v-else>
+        <span>bytes: </span>
+        <span class="font-bold">{{ tab.originalBytes.length }}</span>
+      </template>
 
       <span> }</span>
     </div>
