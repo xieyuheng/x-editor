@@ -3,6 +3,7 @@ import { Document } from '@xieyuheng/x-markdown'
 import { ref, watchEffect } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import { useGlobalTheme } from '../../models/theme'
+import { reactiveToRaw } from '../../utils/vue/reactiveToRaw'
 
 const props = defineProps<{
   document: Document
@@ -14,12 +15,12 @@ const iframeElement = ref<HTMLIFrameElement | undefined>(undefined)
 
 window.addEventListener('message', (event) => {
   if (event.data.message === 'mounted') {
-    send({ document: props.document })
+    send({ document: reactiveToRaw(props.document) })
     send({ theme: theme.name })
   }
 })
 
-watchEffect(() => send({ document: props.document }))
+watchEffect(() => send({ document: reactiveToRaw(props.document) }))
 watchEffect(() => send({ theme: theme.name }))
 
 function send(data: any) {
