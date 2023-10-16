@@ -1,1 +1,3 @@
-MarkdownPreview -- support local image
+stateDocumentInlineImages
+
+workspaceFindFile
