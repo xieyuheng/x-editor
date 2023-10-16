@@ -2,6 +2,7 @@
 import { parseDocument } from '@xieyuheng/x-markdown'
 import { ref, watchEffect } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
+import { useGlobalTheme } from '../../models/theme'
 
 const props = defineProps<{
   text?: string
@@ -16,20 +17,25 @@ window.addEventListener('message', (event) => {
   }
 })
 
-watchEffect(() => {
-  sendDocument()
-})
+watchEffect(() => sendDocument())
+
+const theme = useGlobalTheme()
+
+watchEffect(() => send({ theme: theme.name }))
 
 function sendDocument() {
-  if (!iframeElement.value) return
-
   if (!props.text) return
+
+  send({ document: parseDocument(props.text) })
+}
+
+function send(data: any) {
+  if (!iframeElement.value) return
 
   const contentWindow = iframeElement.value.contentWindow
   if (!contentWindow) return
 
-  const document = parseDocument(props.text)
-  contentWindow.postMessage({ document }, '*')
+  contentWindow.postMessage(data, '*')
 }
 </script>
 
