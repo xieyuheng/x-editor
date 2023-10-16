@@ -1,3 +1,2 @@
 stateDocumentInlineImages
-
 workspaceFindFile
