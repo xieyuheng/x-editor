@@ -13,12 +13,17 @@ export async function stateFindFile(
   const relativePath = join(state.currentTab.node.parent.relativePath, path)
   const parts = decodeURIComponent(relativePath).split('/')
   let directoryHandle = state.currentWorkspace.root.handle
-  for (const [index, part] of parts.entries()) {
-    if (index === parts.length - 1) {
-      const fileHandle = await directoryHandle.getFileHandle(part)
-      return await fileHandle.getFile()
-    } else {
-      directoryHandle = await directoryHandle.getDirectoryHandle(part)
+
+  try {
+    for (const [index, part] of parts.entries()) {
+      if (index === parts.length - 1) {
+        const fileHandle = await directoryHandle.getFileHandle(part)
+        return await fileHandle.getFile()
+      } else {
+        directoryHandle = await directoryHandle.getDirectoryHandle(part)
+      }
     }
+  } catch (error) {
+    console.error({ who: 'stateFindFile', error })
   }
 }

@@ -1,0 +1,1 @@
+support preview image file
