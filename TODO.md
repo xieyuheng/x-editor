@@ -1,1 +1,1 @@
-workspaceFindFile
+stateFindFile and fix stateDocumentInlineImages
