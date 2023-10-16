@@ -2,11 +2,11 @@
 
 [ [Website](https://editor.fidb.app) ]
 
-A text editor embedded in the browser.
+A text editor embedded in the browser, while still can edit your local files.
 
-- Access user's local file system.
-- Preview Markdown files.
-- View image files.
+- Preview Markdown.
+- View image.
+- Listen audio.
 
 Currently we support Chromium-based browsers (such as Chrome, Edge and Opera).
 
