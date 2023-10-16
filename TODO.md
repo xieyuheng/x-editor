@@ -1,4 +1,4 @@
-EditorTabImage
-EditorTabPlaintext
-EditorTabMarkdown
+EditorTabImage -- improve layout
+EditorTabAudio
+EditorTabVideo
 EditorTabBinary

@@ -40,7 +40,7 @@ function send(data: any) {
       class="absolute left-0 top-0 h-full w-full bg-white p-3 text-stone-500 dark:bg-black dark:text-stone-400"
     >
       <Lang>
-        <template #zh>iframe 加载中。。。</template>
+        <template #zh>iframe 加载中⋯⋯</template>
         <template #en>Loading iframe...</template>
       </Lang>
     </div>
