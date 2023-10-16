@@ -28,6 +28,7 @@ export const contentTypeRecord: Record<string, string> = {
   '.mov': 'video/quicktime',
   '.avi': 'video/x-msvideo',
   '.mkv': 'video/x-matroska',
+  '.webm': 'video/webm',
 
   '.ico': 'image/vnd.microsoft.icon',
   '.jpg': 'image/jpeg',
