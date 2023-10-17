@@ -23,7 +23,6 @@
     "path-browserify": "^1.0.1",
     "splitpanes": "^3.1.5",
     "vue": "^3.3.4",
-    "vue-meta": "^2.4.0",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
