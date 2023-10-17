@@ -17,7 +17,6 @@ const documentEnriched = ref<Document | undefined>()
 watch(
   document,
   async () => {
-    documentEnriched.value = undefined
     documentEnriched.value = await stateDocumentInlineImages(
       props.state,
       document.value,
