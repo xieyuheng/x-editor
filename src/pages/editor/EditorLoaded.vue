@@ -2,8 +2,8 @@
 import { useEventListener } from '@vueuse/core'
 import EditorLayout from './EditorLayout.vue'
 import { State } from './State'
-import { stateWatch } from './stateWatch'
 import { stateIsModified } from './stateIsModified'
+import { stateWatch } from './stateWatch'
 
 const props = defineProps<{ state: State }>()
 
