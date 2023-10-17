@@ -3,6 +3,7 @@ import EditorTabAudio from './EditorTabAudio.vue'
 import EditorTabImage from './EditorTabImage.vue'
 import EditorTabMarkdown from './EditorTabMarkdown.vue'
 import EditorTabPlaintext from './EditorTabPlaintext.vue'
+import EditorTabUnknown from './EditorTabUnknown.vue'
 import EditorTabVideo from './EditorTabVideo.vue'
 import { State } from './State'
 import { Tab } from './Tab'
@@ -44,4 +45,6 @@ defineProps<{
     :state="state"
     :tab="tab"
   />
+
+  <EditorTabUnknown v-else :state="state" :tab="tab" />
 </template>
