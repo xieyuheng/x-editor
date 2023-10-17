@@ -11,7 +11,10 @@ stateWatch(props.state)
 
 useEventListener(window, 'beforeunload', (event) => {
   if (stateIsModified(props.state)) {
+    // To confirm if user really want to leave the page.
+    // https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event
     event.preventDefault()
+    event.returnValue = 'string'
   }
 })
 </script>
