@@ -3,14 +3,14 @@ import { useEventListener } from '@vueuse/core'
 import EditorLayout from './EditorLayout.vue'
 import { State } from './State'
 import { stateWatch } from './stateWatch'
-import { stateisModified } from './stateisModified'
+import { stateIsModified } from './stateIsModified'
 
 const props = defineProps<{ state: State }>()
 
 stateWatch(props.state)
 
 useEventListener(window, 'beforeunload', (event) => {
-  if (stateisModified(props.state)) {
+  if (stateIsModified(props.state)) {
     event.preventDefault()
   }
 })
