@@ -21,7 +21,7 @@ const lang = useGlobalLang()
 
 <template>
   <div
-    class="h-screen-dynamic flex w-screen flex-col bg-white text-xl text-black dark:bg-black dark:text-white"
+    class="h-screen-dynamic flex w-screen flex-col bg-white text-lg text-black dark:bg-black dark:text-white"
   >
     <Head>
       <title v-if="lang.isZh()">X 编辑器</title>

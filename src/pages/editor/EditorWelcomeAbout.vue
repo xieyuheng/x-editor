@@ -8,13 +8,13 @@ defineProps<{ state: State }>()
 <template>
   <div class="flex h-full flex-col justify-between space-y-4">
     <div class="flex flex-col space-y-4">
-      <Lang class="text-2xl font-bold sm:text-3xl">
+      <Lang class="text-2xl font-bold ">
         <template #zh>关于</template>
         <template #en>About</template>
       </Lang>
 
       <div
-        class="flex max-w-lg flex-col items-start space-y-2 text-xl sm:text-2xl"
+        class="flex max-w-lg flex-col items-start space-y-2 text-xl "
       >
         <Lang class="flex flex-col space-y-2.5">
           <template #zh>

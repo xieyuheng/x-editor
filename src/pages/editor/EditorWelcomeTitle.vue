@@ -6,7 +6,7 @@ defineProps<{ state: State }>()
 </script>
 
 <template>
-  <Lang class="text-2xl sm:text-3xl">
+  <Lang class="text-2xl ">
     <template #zh>
       <span>欢迎使用</span>
       <br class="block sm:hidden" />
