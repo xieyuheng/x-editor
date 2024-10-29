@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import * as musicMetadata from 'music-metadata-browser'
+import * as musicMetadata from 'music-metadata'
 import { onUnmounted, ref, watchEffect } from 'vue'
 import Lang from '../../components/lang/Lang.vue'
 import EditorModeline from './EditorModeline.vue'
