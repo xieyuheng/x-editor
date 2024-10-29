@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import EditorTabAudio from './EditorTabAudio.vue'
 import EditorTabImage from './EditorTabImage.vue'
+import EditorTabMimor from './EditorTabMimor.vue'
 import EditorTabMarkdown from './EditorTabMarkdown.vue'
 import EditorTabPlaintext from './EditorTabPlaintext.vue'
 import EditorTabUnknown from './EditorTabUnknown.vue'
@@ -16,8 +17,10 @@ defineProps<{
 </script>
 
 <template>
+  <EditorTabMimor v-if="tab.file.name.endsWith('.mimor')" :state :tab />
+
   <EditorTabImage
-    v-if="tabMediaType(tab).startsWith('image/')"
+    v-else-if="tabMediaType(tab).startsWith('image/')"
     :state="state"
     :tab="tab"
   />
