@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { Base64 } from 'js-base64'
-import { State } from './State'
-import { Tab } from './Tab'
 import { useGlobalLang } from '../../components/lang/useGlobalLang'
 import { useGlobalTheme } from '../../models/theme'
-
+import { State } from './State'
+import { Tab } from './Tab'
 
 defineProps<{
   state: State

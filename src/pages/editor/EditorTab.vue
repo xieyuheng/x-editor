@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import EditorTabAudio from './EditorTabAudio.vue'
 import EditorTabImage from './EditorTabImage.vue'
-import EditorTabMimor from './EditorTabMimor.vue'
 import EditorTabMarkdown from './EditorTabMarkdown.vue'
+import EditorTabMimor from './EditorTabMimor.vue'
 import EditorTabPlaintext from './EditorTabPlaintext.vue'
 import EditorTabUnknown from './EditorTabUnknown.vue'
 import EditorTabVideo from './EditorTabVideo.vue'
