@@ -5,7 +5,7 @@
 A text editor embedded in the browser, while still can edit your local files.
 
 - Preview Markdown.
-- Preview Mimor.
+- Preview [Mimor](https://github.com/xieyuheng/mimor).
 - View image.
 - Listen audio.
 - Watch video.
