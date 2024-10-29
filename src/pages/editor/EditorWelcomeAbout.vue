@@ -18,21 +18,20 @@ defineProps<{ state: State }>()
           <template #zh>
             <p><b>X 编辑器</b>是嵌入在浏览器中的文本编辑器。</p>
 
-            <p>它可以访问用户的本地文件系统，并且预览 Markdown 文件。</p>
+            <p>它可以访问用户的本地文件系统，并且预览 Markdown、Mimor 等文件。</p>
 
-            <p>目前支持 Chrome、Edge 和 Opera 等基于 Chromium 的浏览器。</p>
+            <p>目前支持 Chrome 和 Edge 等基于 Chromium 的浏览器。</p>
           </template>
           <template #en>
             <p><b>X Editor</b> is a text editor embedded in the browser.</p>
 
             <p>
-              It can access user's local file system, and preview Markdown
+              It can access user's local file system, and preview Markdown & Mimor
               files.
             </p>
 
             <p>
-              Currently we support Chromium-based browsers (such as Chrome, Edge
-              and Opera).
+              Currently we support Chromium-based browsers (such as Chrome and Edge).
             </p>
           </template>
         </Lang>
