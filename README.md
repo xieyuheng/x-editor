@@ -5,6 +5,7 @@
 A text editor embedded in the browser, while still can edit your local files.
 
 - Preview Markdown.
+- Preview Mimor.
 - View image.
 - Listen audio.
 - Watch video.
