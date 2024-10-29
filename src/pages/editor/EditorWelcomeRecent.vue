@@ -16,7 +16,7 @@ defineProps<{ state: State }>()
       "
       class="flex flex-col space-y-4 overflow-hidden"
     >
-      <Lang class="max-w-lg text-xl font-bold text-stone-400 ">
+      <Lang class="max-w-lg text-xl font-bold text-stone-400">
         <template #zh>
           <div>最近打开的文件和文件夹，将出现在这里。</div>
         </template>
@@ -30,7 +30,7 @@ defineProps<{ state: State }>()
       v-if="Object.keys(state.recentlyOpened.directoryHandles).length > 0"
       class="flex flex-col space-y-4 overflow-auto"
     >
-      <Lang class="text-2xl font-bold ">
+      <Lang class="text-2xl font-bold">
         <template #zh>最近打开的文件夹</template>
         <template #en>Recently Opened Directories</template>
       </Lang>
@@ -50,7 +50,7 @@ defineProps<{ state: State }>()
       v-if="Object.keys(state.recentlyOpened.fileHandles).length > 0"
       class="flex flex-col space-y-4 overflow-auto"
     >
-      <Lang class="text-2xl font-bold ">
+      <Lang class="text-2xl font-bold">
         <template #zh>最近打开的文件</template>
         <template #en>Recently Opened Files</template>
       </Lang>

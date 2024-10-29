@@ -8,14 +8,12 @@ defineProps<{ state: State }>()
 <template>
   <div class="flex h-full flex-col justify-between space-y-4">
     <div class="flex flex-col space-y-4">
-      <Lang class="text-2xl font-bold ">
+      <Lang class="text-2xl font-bold">
         <template #zh>关于</template>
         <template #en>About</template>
       </Lang>
 
-      <div
-        class="flex max-w-lg flex-col items-start space-y-2 text-xl "
-      >
+      <div class="flex max-w-lg flex-col items-start space-y-2 text-xl">
         <Lang class="flex flex-col space-y-2.5">
           <template #zh>
             <p><b>X 编辑器</b>是嵌入在浏览器中的文本编辑器。</p>
