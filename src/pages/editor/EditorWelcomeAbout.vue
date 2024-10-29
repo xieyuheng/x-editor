@@ -40,7 +40,7 @@ defineProps<{ state: State }>()
     </div>
 
     <div class="flex flex-col items-start space-y-2">
-      <Lang class="text-base text-stone-500 dark:text-stone-400 sm:text-lg">
+      <Lang class="text-base text-stone-500 sm:text-lg dark:text-stone-400">
         <template #zh>
           <p>
             源代码：<a
@@ -60,7 +60,7 @@ defineProps<{ state: State }>()
         </template>
       </Lang>
 
-      <Lang class="text-base text-stone-500 dark:text-stone-400 sm:text-lg">
+      <Lang class="text-base text-stone-500 sm:text-lg dark:text-stone-400">
         <template #zh>
           <a href="https://xieyuheng.com" target="_blank"> 谢宇恒软件工作室 </a>
         </template>

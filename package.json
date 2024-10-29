@@ -7,8 +7,6 @@
     "check:watch": "vue-tsc --noEmit --watch",
     "check:ts": "tsc --noEmit",
     "check:ts:watch": "tsc --noEmit --watch",
-    "test:ts": "vitest --dir src --threads false --run",
-    "test": "npm run test:ts",
     "format": "prettier src --write"
   },
   "dependencies": {
@@ -29,20 +27,16 @@
     "@types/path-browserify": "^1.0.3",
     "@types/splitpanes": "^2.2.6",
     "@types/wicg-file-system-access": "^2023.10.5",
-    "@vitejs/plugin-vue": "^5.1.4",
-    "@volar/vue-typescript": "^1.6.5",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.8",
-    "register-service-worker": "^1.7.2",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3",
     "vite": "^5.4.10",
-    "vite-bundle-visualizer": "^1.2.1",
+    "@vitejs/plugin-vue": "^5.1.4",
     "vite-plugin-node-polyfills": "^0.22.0",
-    "vitest": "^2.1.4",
     "vue-tsc": "^2.1.8"
   }
 }
