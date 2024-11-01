@@ -1,6 +1,6 @@
 # X Editor
 
-[ [Website](https://editor.fidb.app) ]
+[ [Website](https://editor.xieyuheng.com) ]
 
 A text editor embedded in the browser, while still can edit your local files.
 
