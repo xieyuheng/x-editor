@@ -17,7 +17,7 @@
     "browser-fs-access": "^0.35.0",
     "idb-keyval": "^6.2.1",
     "js-base64": "^3.7.7",
-    "mimor": "^0.1.12",
+    "mimor": "^0.1.17",
     "music-metadata": "^10.5.1",
     "path-browserify": "^1.0.1",
     "splitpanes": "^3.1.5",
